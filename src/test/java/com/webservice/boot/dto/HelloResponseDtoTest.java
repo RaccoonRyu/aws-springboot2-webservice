@@ -9,6 +9,7 @@ public class HelloResponseDtoTest {
 
     @Test
     public void lombokFunctionTest() {
+<<<<<<< HEAD
         // given
         String name = "test";
         int amount = 1000;
@@ -19,6 +20,16 @@ public class HelloResponseDtoTest {
         // then
         // assertThat : assertj의 검증 메서드. 검증하고 싶은 대상을 인자로 받음. 메서드 체이닝 지원됨
         // isEqualTo : assertj의 동등 비교 메서드. assertThat에 있는 값과 isEqualTo의 값을 비교해 같을 때만 테스트 성공
+=======
+        //given
+        String name = "test";
+        int amount = 1000;
+
+        //when
+        HelloResponseDto dto = new HelloResponseDto(name, amount);
+
+        //then
+>>>>>>> origin/master
         assertThat(dto.getName()).isEqualTo(name);
         assertThat(dto.getAmount()).isEqualTo(amount);
     }
