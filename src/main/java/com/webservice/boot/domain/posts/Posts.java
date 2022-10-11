@@ -1,4 +1,4 @@
-package com.webservice.domain.posts;
+package com.webservice.boot.domain.posts;
 
 import lombok.Builder;
 import lombok.Getter;
