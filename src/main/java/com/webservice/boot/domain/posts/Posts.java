@@ -36,4 +36,10 @@ public class Posts {
         this.content = content;
         this.author = author; // 빌더 패턴을 사용하면 어느 필드에 어떤 값을 채워야 할지를 명확하게 할 수 있다.
     }
+
+    // setter 대신 객체의 행위를 나타내는 메서드를 명확한 목적과 의도로 만든다. (책 92p 참조)
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
