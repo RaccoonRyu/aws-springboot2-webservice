@@ -3,6 +3,12 @@ package com.webservice.boot.dto;
 import com.webservice.boot.domain.posts.Posts;
 import lombok.Getter;
 
+/**
+ * PostsResponseDto
+ * - Posts 클래스에 대한 DB 응답용 DTO
+ *
+ * @author 류지헌
+ */
 @Getter
 public class PostsResponseDto {
 

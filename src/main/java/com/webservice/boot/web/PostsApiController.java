@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * PostsApiController
- * - Posts 등록, 수정, 삭제 컨트롤러
+ * - Posts 등록, 수정, 삭제, 조회 컨트롤러
  *
  * @author 류지헌
  */
