@@ -1,5 +1,6 @@
 package com.webservice.boot.domain.posts;
 
+import com.webservice.boot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor // 기본 생성자(Args가 없는) 추가
 @Entity // 해당 클래스가 DB의 테이블과 링크될 클래스임을 알림. 통상적으로 카멜케이스 -> 언더스코어 네이밍을 사용
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // 해당 테이블의 PK(기본키) 필드를 명시함
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK의 생성 규칙을 나타냄. 또한 생성 규칙은 자동증가이다.
