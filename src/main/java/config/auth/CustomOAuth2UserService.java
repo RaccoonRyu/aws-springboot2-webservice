@@ -2,6 +2,8 @@ package config.auth;
 
 import com.webservice.boot.domain.user.User;
 import com.webservice.boot.domain.user.UserRepository;
+import config.auth.dto.OAuthAttributes;
+import config.auth.dto.SessionUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -52,9 +54,10 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
     }
 
+    // saveOrUpdate : 구글 사용자 정보(사용자명, 프로필사진)가 업데이트 되었을 때를 대비한 update 기능
     private User saveOrUpdate(OAuthAttributes attributes) {
         User user = userRepository.findByEmail(attributes.getEmail())
-                                                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
+                                                .map(entity -> entity.updateUser(attributes.getName(), attributes.getPicture()))
                                                 .orElse(attributes.toEntity());
 
         return userRepository.save(user);
